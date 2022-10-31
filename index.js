@@ -18,7 +18,12 @@ let server = app.listen(
   )
 );
 
-const io = socket(server, {cors: {origin: "*"}});
+const io = socket(server, {
+   cors: {
+    origin: "https://chatapp-snakshay.netlify.app",
+    methods: ["GET", "POST"]
+  }
+});
 
 io.on("connection", (socket) => {
   //for a new user joining the room
