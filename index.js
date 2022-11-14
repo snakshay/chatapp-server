@@ -22,7 +22,8 @@ const io = socket(server, {
    cors: {
     origin: "https://chatapp-snakshay.netlify.app",
     methods: ["GET", "POST"]
-  }
+  },
+  path: "/chat/"
 });
 
 io.on("connection", (socket) => {
